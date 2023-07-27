@@ -1,0 +1,28 @@
+#VARIABLES
+# Configuration
+#HOST="172.18.52.40"
+HOST="172.18.24.73"
+USER="root"
+PASSWORD="RootPassword:"
+DESTINATION="/sap/data_in"
+DATA_IN_DIR="/SAP/data_in"
+INVOICE_REPO_DIR="/SAP/invoice_repo"
+REPORT_DIR="/SAP/reports"
+DATE="date +%d-%m-%Y_%H:%M:%S"  
+REPORT_FILE="$REPORT_DIR"/report_$(date +%Y%m%d).csv
+COMPLETE_REPORT="/SAP/full_report.csv"
+FILE_EXTENSIONS=".pdf|.jpeg|.doc"
+
+## MAIL DETAILS
+
+echo "Send email with attached CSV file"
+email_subject="${TRANSFER_STATUS} ${REASON}"
+email_body="Please find the attached CSV file."
+
+SMTP_SERVER=smtp.office365.com
+SMTP_PORT=587
+EMAIL_AUTHUSER=nandini01.c@quickheal.co.in
+EMAIL_AUTHPWD=vfnwtyxjkcsymbhv
+FROM_EMAIL=nandini01.c@quickheal.co.in
+TO_EMAIL="nandini01.c@quickheal.co.in"
+
